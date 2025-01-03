@@ -1,8 +1,7 @@
 trigger:
 - main  # Change this if needed
 
-pool:
-  vmImage: 'ubuntu-latest'  # Use an Azure DevOps pre-configured agent pool
+pool: helloworld  # Use an Azure DevOps pre-configured agent pool
 
 steps:
 - task: Checkout@1  # Ensure the code is checked out first
