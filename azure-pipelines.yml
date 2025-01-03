@@ -12,7 +12,7 @@ pool: helloworld
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'C:\Users\DELL\OneDrive\Desktop\DEVOPS\newrepo1\simple-java-maven-app-masterpom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
