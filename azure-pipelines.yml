@@ -1,19 +1,18 @@
-trigger:
-- main  # Change this if needed
+# Maven
 
-pool: helloworld  # Use an Azure DevOps pre-configured agent pool
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- main
+
+pool: helloworld
 
 steps:
-- task: Checkout@1  # Ensure the code is checked out first
-
-- script: |
-    echo "Listing files in the repository"
-    dir $(Build.SourcesDirectory)
-  displayName: 'List files in repository'
-
 - task: Maven@4
   inputs:
-    mavenPomFile: '$(Build.SourcesDirectory)/pom.xml'  # Update this path if necessary
+    mavenPomFile: '$(Build.SourcesDirectory)/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
