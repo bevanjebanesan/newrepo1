@@ -21,7 +21,7 @@ steps:
     goals: 'package'
 - task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: '$(Build.SourcesDirectory)/simple-java-maven-app-master/pom.xml'
     goals: 'test'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
