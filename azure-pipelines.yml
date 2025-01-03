@@ -12,7 +12,7 @@ pool: helloworld
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: '$(Build.SourcesDirectory)/pom.xml'
+    mavenPomFile: '$(Build.SourcesDirectory)/simple-java-maven-app-master/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
